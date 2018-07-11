@@ -62,8 +62,7 @@ Added ?roll
 **Version """ + version + "**")
 
 
-invText = ("An invite for KrazyBot - https://bit.ly/2s3xT7X")
-#KrazyTest - https://bit.ly/2LndAKJ
+invText = ("An invite for KrazyBot - https://bit.ly/krazybot")
 @client.event
 async def on_ready():
     print ("Bot online")
