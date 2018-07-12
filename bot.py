@@ -120,7 +120,7 @@ async def on_message(message):
             await client.send_message(message.channel, embed=emb)
             print ("embed: " + text)
         if message.content.upper().startswith(prefix + "INVITE"):
-            em = discord.Embed(title="Invite", description=invText, colour=0x00ff00)
+            em = discord.Embed(title= ":link: Click to add to your server! :link:", url= "http://bit.ly/krazyco", colour=0x00ff00)
             await client.send_message(message.channel, embed=em)
             print ("invite")
         if message.content.upper().startswith(prefix + "BINARY"):
