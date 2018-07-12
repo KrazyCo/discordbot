@@ -32,7 +32,7 @@ helpText = ("""
 **""" + prefix + """eggplant** - Sends a eggplant
 **""" + prefix + """pig** - Sends a pig
 
-**If you need more help, join not this lol**
+**If you need more help, join https://discord.gg/aShTH8T**
 """)
 
 version = ("0.1.3")
