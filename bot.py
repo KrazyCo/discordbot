@@ -57,6 +57,8 @@ Added a nice version
 **0.1.3:**
 Added ?binary
 Added ?roll
+**0.1.4:**
+Made ?invite look nicer
 
 
 **Version """ + version + "**")
