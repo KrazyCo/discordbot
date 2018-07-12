@@ -8,16 +8,6 @@ import random
 binnum1 = [128, 64, 32, 16]
 binnum2 = [8, 4, 2, 1]
 
-
-file = open(“testfile.txt”,”w”) 
- 
-file.write(“Hello World”) 
-file.write(“This is our new text file”) 
-file.write(“and this is another line.”) 
-file.write(“Why? Because we can.”) 
- 
-file.close() 
-
 prefix = ("?")
 
 client = discord.Client()
