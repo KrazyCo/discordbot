@@ -32,7 +32,7 @@ helpText = ("""
 **""" + prefix + """eggplant** - Sends a eggplant
 **""" + prefix + """pig** - Sends a pig
 
-**If you need more help, join not this lool**
+**If you need more help, join not this loool**
 """)
 
 version = ("0.1.3")
