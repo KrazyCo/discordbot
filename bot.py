@@ -147,6 +147,15 @@ async def on_message(message):
                 else:
                     await client.send_message(message.channel, "I got " + str("".join(endnum)) + " from " + str(input2))
                 print ("binary: " + str(input2))
+        if message.content.upper() == prefix + "text":
+            file = open(“testfile.txt”,”w”) 
+ 
+            file.write(“Hello World”) 
+            file.write(“This is our new text file”) 
+            file.write(“and this is another line.”) 
+            file.write(“Why? Because we can.”) 
+ 
+            file.close() 
 
 
 
