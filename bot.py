@@ -118,11 +118,11 @@ async def on_message(message):
         if message.content.upper().startswith(prefix + "EMBED"):
             text = ("%s" % (" ".join(args[1:])))
             await client.delete_message(message)
-            emb = discord.Embed(title=text, colour=0x00ff00)
+            emb = discord.Embed(title=text, colour=0x1E894A)
             await client.send_message(message.channel, embed=emb)
             print ("embed: " + text)
         if message.content.upper().startswith(prefix + "INVITE"):
-            em = discord.Embed(title= ":link: Click to add to your server! :link:", url= "https://discordapp.com/api/oauth2/authorize?client_id=445511107940188160&permissions=2146958583&scope=bot", colour=0x00ff00)
+            em = discord.Embed(title= ":link: Click to add to your server! :link:", url= "https://discordapp.com/api/oauth2/authorize?client_id=445511107940188160&permissions=2146958583&scope=bot", colour=0x1E894A)
             await client.send_message(message.channel, embed=em)
             print ("invite")
         if message.content.upper().startswith(prefix + "BINARY"):
@@ -154,11 +154,11 @@ async def on_message(message):
 
 
         if message.content.upper().startswith(prefix + "HELP"):
-            em = discord.Embed(title="Help", description=helpText, colour=0x00ff00)
+            em = discord.Embed(title="Help", description=helpText, colour=0x1E894A)
             await client.send_message(message.channel, embed=em)
             print ("help")
         if message.content.upper().startswith(prefix + "INFO"):
-            em = discord.Embed(title="Info", description=infoText, colour=0x00ff00)
+            em = discord.Embed(title="Info", description=infoText, colour=0x1E894A)
             await client.send_message(message.channel, embed=em)
             print ("info")
 
