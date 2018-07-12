@@ -49,7 +49,7 @@ Changed colour of embeds
 Made ?help look nicer
 Added ?info
 **0.1.1:**
-Fixed ?embed - didn't like spaces, now force fed
+Fixed ?embed - didn't like spaces
 **0.1.2:**
 Added ?invite
 **0.1.2.5**
@@ -59,6 +59,7 @@ Added ?binary
 Added ?roll
 **0.1.4:**
 Made ?invite look nicer
+Made all embed colours look more like the logo
 
 
 **Version """ + version + "**")
