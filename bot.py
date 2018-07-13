@@ -60,6 +60,8 @@ Added ?roll
 **0.1.4:**
 Made ?invite look nicer
 Made all embed colours look more like the logo
+**0.1.5:**
+Added ?link
 
 
 **Version """ + version + "**")
@@ -126,6 +128,13 @@ async def on_message(message):
             em = discord.Embed(title= ":link: Click to add to your server! :link:", url= "https://discordapp.com/api/oauth2/authorize?client_id=445511107940188160&permissions=2146958583&scope=bot", colour=0x1E894A)
             await client.send_message(message.channel, embed=em)
             print ("invite")
+        if message.content.upper().startswith(prefix + "LINK"):
+            text = ("%s" % (" ".join(args[2:])))
+            inputurl = (args[1])
+            em = discord.Embed(title= text, url= inputurl, colour=0x1E894A)
+            await client.send_message(message.channel, embed=em)
+            await client.delete_message(message)
+            print ("link")
         if message.content.upper().startswith(prefix + "BINARY"):
             input1 = int(args[1])
             input2 = input1
