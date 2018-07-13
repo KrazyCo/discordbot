@@ -22,9 +22,10 @@ helpText = ("""
 **""" + prefix + """invite** - Get a link to invite KrazyBot to your own server
 **""" + prefix + """roll** - Rolls a dice
 **""" + prefix + """say (message)** - Says what you say
-**""" + prefix + """emoji (emoji name)** sends whatever emoji you say
-**""" + prefix + """embed (message)** - embeds your message
-**""" + prefix + """binary (number)** - turns the number you said into binary
+**""" + prefix + """emoji (emoji name)** Sends whatever emoji you say
+**""" + prefix + """embed (message)** - Embeds your message
+**""" + prefix + """binary (number)** - Turns the number you said into binary
+**""" + prefix + """link (URL) (message)** - Puts a hyperlink iin an embed
 
 **Fun Commands**
 **""" + prefix + """cookie** - Sends a cookie
@@ -35,7 +36,7 @@ helpText = ("""
 **If you need more help, join https://discord.gg/aShTH8T**
 """)
 
-version = ("0.1.3")
+version = ("0.1.5")
 
 infoText = ("""
 **Made by @KrazyCo#3341
