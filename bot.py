@@ -25,7 +25,7 @@ helpText = ("""
 **""" + prefix + """emoji (emoji name)** Sends whatever emoji you say
 **""" + prefix + """embed (message)** - Embeds your message
 **""" + prefix + """binary (number)** - Turns the number you said into binary
-**""" + prefix + """link (URL) (message)** - Puts a hyperlink iin an embed
+**""" + prefix + """link (URL) (message)** - Puts a hyperlink in an embed
 
 **Fun Commands**
 **""" + prefix + """cookie** - Sends a cookie
