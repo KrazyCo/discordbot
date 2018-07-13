@@ -27,7 +27,6 @@ embed.add_field(name='?link (URL) (message)', value='Puts a hyperlink in an embe
 embed.add_field(name='If you need more help join', value='https://discord.gg/aShTH8T', inline=False)
 #           )
 
-version = ("0.1.5")
 
 infoText = ("""
 **Made by @KrazyCo#3341
@@ -57,10 +56,7 @@ Added ?link
 Made ?help nicer
 **0.1.6:**
 Removed ?emoji
-Removed ?say
-
-
-**Version """ + version + "**")
+Removed ?say""")
 
 
 invText = ("An invite for KrazyBot - https://bit.ly/krazybot")
