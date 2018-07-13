@@ -13,28 +13,22 @@ prefix = ("?")
 client = discord.Client()
 client = commands.Bot(command_prefix = "?")
 
-helpText = ("""
-**Helpful Commands**
-**""" + prefix + """help** - This command
-**""" + prefix + """info** - See info about the Bot and Changelogs
-**""" + prefix + """ping** - Pong!
-**""" + prefix + """servers** - See how many servers I am running!
-**""" + prefix + """invite** - Get a link to invite KrazyBot to your own server
-**""" + prefix + """roll** - Rolls a dice
-**""" + prefix + """say (message)** - Says what you say
-**""" + prefix + """emoji (emoji name)** Sends whatever emoji you say
-**""" + prefix + """embed (message)** - Embeds your message
-**""" + prefix + """binary (number)** - Turns the number you said into binary
-**""" + prefix + """link (URL) (message)** - Puts a hyperlink in an embed
-
-**Fun Commands**
-**""" + prefix + """cookie** - Sends a cookie
-**""" + prefix + """watermelon** - Sends a watermelon
-**""" + prefix + """eggplant** - Sends a eggplant
-**""" + prefix + """pig** - Sends a pig
-
-**If you need more help, join https://discord.gg/aShTH8T**
-""")
+helpText = (title = "Krazy", description = "These are the Krazy commands:, 
+           fields = [{name = prefix + "help",
+                      value = "The help command"
+                     },
+                     {
+                      name = prefix + "info",
+                      value = "See infomation on Krazy and the changelogs"
+                     },
+                     {
+                      name = prefix + "ping",
+                      value = "Pong!"
+                     },
+                     {
+                      name = prefix + "help",
+                      value = "The help command"
+                     }])
 
 version = ("0.1.5")
 
@@ -165,7 +159,7 @@ async def on_message(message):
 
 
         if message.content.upper().startswith(prefix + "HELP"):
-            em = discord.Embed(title="Help", description=helpText, colour=0x1E894A)
+            em = discord.Embed(helpText, colour=0x1E894A)
             await client.send_message(message.author, embed=em)
             dm = discord.Embed(description=":mailbox_with_mail: Check DM's", colour=0x1E894A)
             await client.send_message(message.channel, embed=dm)
