@@ -53,7 +53,7 @@ Added ?info
 Fixed ?embed - didn't like spaces
 **0.1.2:**
 Added ?invite
-**0.1.2.5**
+**0.1.2.5:**
 Added a nice version
 **0.1.3:**
 Added ?binary
