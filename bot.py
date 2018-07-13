@@ -13,8 +13,19 @@ prefix = ("?")
 client = discord.Client()
 client = commands.Bot(command_prefix = "?")
 
-helpText = (
-           )
+#helpText = (
+embed=discord.Embed(title="Krazy", description="These are the Krazy commands")
+embed.add_field(name=?info, value=See info about Krazy and the changelogs)
+embed.add_field(name=?ping, value=Pong!)
+embed.add_field(name=?serves, value=See how many serves I am in)
+embed.add_field(name=?invite, value=Get an invite for Krazy)
+embed.add_field(name=?roll, value=Rolls a dice)
+embed.add_field(name=?say (message), value=Says what you say)
+embed.add_field(name=?embed (message), value=Embeds your message)
+embed.add_field(name=?binary (interger), value=Turns the number you sent into 8 bit binary)
+embed.add_field(name=?link (URL) (message), value=Puts a hyperlink in an embed)
+embed.add_field(name=If you need more help join, value=https://discord.gg/aShTH8T)
+#           )
 
 version = ("0.1.5")
 
@@ -91,10 +102,6 @@ async def on_message(message):
                 await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
                 await client.delete_message(message)
                 print ("say: %s" % (" ".join(args[1:])))
-        if message.content.upper().startswith(prefix + "EMOJI"):
-            await client.delete_message(message)
-            await client.send_message(message.channel, ":%s:" % ("".join(args[1])))
-            print ("emoji: %s" % ("".join(args[1:])))
         if message.content.upper().startswith(prefix + "SERVERS"):
             await client.send_message(message.channel, "I am serving %s servers!" % len(client.servers))
             await client.change_presence(game=discord.Game(name=prefix + "help | %s Servers!" % len(client.servers)))
@@ -145,23 +152,7 @@ async def on_message(message):
 
 
         if message.content.upper().startswith(prefix + "HELP"):
-            em = discord.Embed(title = "Krazy", description = "These are the Krazy commands:,
-                               fields = [{name = prefix + "help",
-                                          value = "The help command"
-                                         },
-                                         {
-                                                    name = prefix + "info",
-                                                    value = "See infomation on Krazy and the changelogs"
-                                         },
-                                         {
-                                                    name = prefix + "ping",
-                                                    value = "Pong!"
-                                         },
-                                         {
-                                                    name = prefix + "help",
-                                                    value = "The help command"
-                                         }] , colour=0x1E894A)
-            await client.send_message(message.author, embed=em)
+            await client.send_message(message.author, embed=embed)
             dm = discord.Embed(description=":mailbox_with_mail: Check DM's", colour=0x1E894A)
             await client.send_message(message.channel, embed=dm)
             print ("help")
