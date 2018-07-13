@@ -55,6 +55,9 @@ Made all embed colours look more like the logo
 **0.1.5:**
 Added ?link
 Made ?help nicer
+**0.1.6:**
+Removed ?emoji
+Removed ?say
 
 
 **Version """ + version + "**")
@@ -95,14 +98,6 @@ async def on_message(message):
         if message.content.upper() == prefix + "ROLL":
             await client.send_message(message.channel, "I rolled a "+ str(random.randint(1,6)))
             print ("roll")
-        if message.content.upper().startswith(prefix + "SAY"):
-            if message.content.upper().startswith("?SAY ?SAY"):
-                await client.send_message(message.channel, "Thats not allowed!")
-                print ("spammers")
-            else:
-                await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
-                await client.delete_message(message)
-                print ("say: %s" % (" ".join(args[1:])))
         if message.content.upper().startswith(prefix + "SERVERS"):
             await client.send_message(message.channel, "I am serving %s servers!" % len(client.servers))
             await client.change_presence(game=discord.Game(name=prefix + "help | %s Servers!" % len(client.servers)))
