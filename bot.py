@@ -167,6 +167,8 @@ async def on_message(message):
         if message.content.upper().startswith(prefix + "HELP"):
             em = discord.Embed(title="Help", description=helpText, colour=0x1E894A)
             await client.send_message(message.author, embed=em)
+            dm = discord.Embed(description=":mailbox_with_mail: Check DM's, colour=0x1E894A)
+            await client.send_message(message.author, embed=dm)
             print ("help")
         if message.content.upper().startswith(prefix + "INFO"):
             em = discord.Embed(title="Info", description=infoText, colour=0x1E894A)
