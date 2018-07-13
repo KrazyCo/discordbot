@@ -54,6 +54,7 @@ Made ?invite look nicer
 Made all embed colours look more like the logo
 **0.1.5:**
 Added ?link
+Made ?help nicer
 
 
 **Version """ + version + "**")
