@@ -14,7 +14,7 @@ client = discord.Client()
 client = commands.Bot(command_prefix = "?")
 
 #helpText = (
-embed=discord.Embed(title="Krazy", description="These are the Krazy commands")
+embed=discord.Embed(title="Krazy", description="These are the Krazy commands", colour = 0x1E894A)
 embed.add_field(name='?info', value='See info about Krazy and the changelogs', inline=False)
 embed.add_field(name='?ping', value='Pong!', inline=False)
 embed.add_field(name='?serves', value='See how many serves I am in', inline=False)
