@@ -5,7 +5,7 @@ import asyncio
 import time
 import random
 
-binnum1 = [128, 64, 32, 16, 8, 4, 2, 1]
+binnum = [128, 64, 32, 16, 8, 4, 2, 1]
 
 prefix = ("?")
 
