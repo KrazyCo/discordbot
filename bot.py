@@ -222,7 +222,7 @@ async def on_message(message):
                         else:
                             hexOut = rhex
                             print (rhex)
-                        await client.send_message(message.channel, "I got " + str("".join(hexOut)) + " from " + str(hexIn))
+                        await client.send_message(message.channel, "I got #" + str("".join(hexOut)))
                         print ("hex: " + str(hexIn))
             
 
