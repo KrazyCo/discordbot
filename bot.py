@@ -6,6 +6,10 @@ import time
 import random
 
 binnum = [128, 64, 32, 16, 8, 4, 2, 1]
+binnum1 = [128, 64, 32, 16]
+binnum2 = [8, 4, 2, 1]
+hex2num = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', "A", "B", "C", "D", "E", "F"]
+hex1num = [8, 4, 2, 1]
 
 prefix = ("?")
 
@@ -132,6 +136,31 @@ async def on_message(message):
                     binaryOut = endnum
             await client.send_message(message.channel, "I got " + str("".join(binaryOut)) + " from " + str(binaryIn))
             print ("binary: " + str(binaryIn))
+        if message.content.upper().startswith(prefix + "HEXADECIMAL"):
+            hexIn = (args[1])
+            input1 = int(hexIn)
+            rhex = []
+            hex1 = 0
+            hex2 = 0
+            if input1 >= 256:
+                print ("Invalid input, please try again with a number under 256.")
+            else:
+                for i in range(4):
+                    if input1 >= binnum1[i]:
+                        input1 = int(input1-binnum1[i])
+                        hex1 = hex1 + hex1num[i]
+                for i in range(4):
+                    if input1 >= binnum2[i]:
+                        input1 = int(input1-binnum2[i])
+                        hex2 = hex2 + hex1num[i]
+                rhex.insert (0, hex2num[hex1])
+                rhex.insert (1, hex2num[hex2])
+                if input1 != 0:
+                    print ("Error please try again")
+                else:
+                    hexOut = rhex
+                    await client.send_message(message.channel, "I got " + str("".join(hexOut)) + " from " + str(hexIn))
+                    print ("hex: " + str(hexIn))
             
 
 
