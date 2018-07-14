@@ -5,8 +5,7 @@ import asyncio
 import time
 import random
 
-binnum1 = [128, 64, 32, 16]
-binnum2 = [8, 4, 2, 1]
+binnum1 = [128, 64, 32, 16, 8, 4, 2, 1]
 
 prefix = ("?")
 
@@ -115,29 +114,24 @@ async def on_message(message):
             await client.delete_message(message)
             print ("link")
         if message.content.upper().startswith(prefix + "BINARY"):
-            input1 = int(args[1])
-            input2 = input1
+            binaryIn = (args[1])
+            input1 = int(binaryIn)
             endnum = []
             if input1 >= 256:
-                await client.send_message(message.channel, "Invalid input, please try again with a number under 256")
+                await client.send_message(message.channel, "Invalid input, please try again with a interger under 256")
             else:
-                for i in range(4):
-                    if input1 >= binnum1[i]:
+                for i in range(8):
+                    if input1 >= binnum[i]:
                         endnum.extend("1")
-                        input1 = int(input1-binnum1[i])
-                    else:
-                        endnum.extend("0")
-                for i in range(4):
-                    if input1 >= binnum2[i]:
-                        endnum.extend("1")
-                        input1 = int(input1-binnum2[i])
+                        input1 = int(input1-binnum[i])
                     else:
                         endnum.extend("0")
                 if input1 != 0:
                     print ("Error please try again")
                 else:
-                    await client.send_message(message.channel, "I got " + str("".join(endnum)) + " from " + str(input2))
-                print ("binary: " + str(input2))
+                    binaryOut = endnum
+            await client.send_message(message.channel, "I got " + str("".join(binaryOut)) + " from " + str(binaryIn))
+            print ("binary: " + str(binaryIn))
             
 
 
