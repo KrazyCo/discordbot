@@ -25,6 +25,8 @@ embed.add_field(name='?invite', value='Get an invite for Krazy', inline=False)
 embed.add_field(name='?roll', value='Rolls a dice', inline=False)
 embed.add_field(name='?embed (message)', value='Embeds your message', inline=False)
 embed.add_field(name='?binary (interger)', value='Turns the number you sent into 8 bit binary', inline=False)
+embed.add_field(name='?hex (interger)', value='Turns the number you sent into 2 bit hexadeciaml', inline=False)
+embed.add_field(name='?rbg (red) (green) (blue)', value='Turns the numbers you sent into 6 bit hexadecimal', inline=False)
 embed.add_field(name='?link (URL) (message)', value='Puts a hyperlink in an embed', inline=False)
 embed.add_field(name='If you need more help join', value='https://discord.gg/aShTH8T', inline=False)
 #           )
@@ -58,7 +60,12 @@ Added ?link
 Made ?help nicer
 **0.1.6:**
 Removed ?emoji
-Removed ?say""")
+Removed ?say
+**0.1.7:**
+Added ?hexadeciaml
+Added ?rgb
+**0.1.7.5:**
+Changed ?hexadecimal to ?hex""")
 
 
 invText = ("An invite for KrazyBot - https://bit.ly/krazybot")
@@ -136,7 +143,7 @@ async def on_message(message):
                     binaryOut = endnum
             await client.send_message(message.channel, "I got " + str("".join(binaryOut)) + " from " + str(binaryIn))
             print ("binary: " + str(binaryIn))
-        if message.content.upper().startswith(prefix + "HEXADECIMAL"):
+        if message.content.upper().startswith(prefix + "HEX"):
             hexIn = (args[1])
             input1 = int(hexIn)
             rhex = []
